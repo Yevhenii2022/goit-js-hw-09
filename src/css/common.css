@@ -16,3 +16,89 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* CSS for color switcher */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container button {
+  padding: 20px 40px;
+  background: none;
+  border: none;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.container .btn-start {
+  margin-right: 30px;
+}
+
+.container button:after,
+.container button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 2px solid #000;
+  transition: transform 0.2s;
+}
+
+.container button:after {
+  transform: translate(3px, 3px);
+}
+
+.container button:before {
+  transform: translate(-3px, -3px);
+}
+
+.container button:hover:after,
+.container button:hover:before {
+  transform: translate(0);
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* CSS for timer */
+.date-picker__container {
+  top: 30%;
+}
+
+#datetime-picker {
+  margin-right: 40px;
+  margin-bottom: 40px;
+  font-size: 22px;
+  text-align: center;
+  width: 308px;
+  height: 55px;
+  border: 2px solid #000;
+  color: #1bbc9b;
+  background-color: transparent;
+}
+
+.timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.field:not(:last-child) {
+  margin-right: 32px;
+}
+
+.value {
+  font-size: 36px;
+  color: #1bbc9b;
+}
